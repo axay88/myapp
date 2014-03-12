@@ -1,8 +1,9 @@
-
 /*
  * GET home page.
  */
 
-exports.index = function(req, res){
-  res.render('index', { title: 'My Application' });
+exports.index = function(req, res) {
+    res.render('index.html', {
+        title: 'My Application'
+    });
 };
