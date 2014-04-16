@@ -2,12 +2,31 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css">
 	<script type="text/javascript" src="javascripts/angular.js"></script>
+	<script type="text/javascript" src="javascripts/angular-route.js"></script>
 	<script type="text/javascript" src="javascripts/site.js"></script>
 	<script type="text/javascript" src="javascripts/controller.js"></script>
 </head>
-<body ng-app>
+<body ng-app='site'>
 	<div ng-controller="primaryController">
 	hello world.... {{dummyModel}}
+	<br/>
+	<div>
+		value of a= {{a}} &nbsp; <br/> value of b= {{b}}
 	</div>
+		<a href="#/create"> create</a>
+	<a href="#/show"> show</a>
+	<a href="#/search"> search</a>
+
+	<br/><br/>
+	<pre>$location.path() = {{$location.path()}}</pre>
+  <pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
+  <pre>$route.current.params = {{$route.current.params}}</pre>
+  <pre>$route.current.scope.name = {{$route.current.scope.name}}</pre>
+  <pre>$routeParams = {{$routeParams}}</pre>
+<br/> <br/>
+  <div ng-view></div>
+	</div>
+
+
 </body>
 </html>
